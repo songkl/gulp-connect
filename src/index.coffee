@@ -166,3 +166,11 @@ module.exports =
   serverClose: ->
     apps.forEach((app) -> do app.server.close)
     apps = []
+  getAllServer: ()->
+    info = []
+    apps.forEach (app)->
+      info.push
+        host : app.host
+        port : app.port
+        https : app.https
+    info

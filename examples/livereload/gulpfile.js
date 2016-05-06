@@ -8,6 +8,7 @@ gulp.task('connect', function() {
     port: 8080,
     livereload: true
   });
+  console.log(connect.getAllServer());
 });
 
 gulp.task('html', function () {
